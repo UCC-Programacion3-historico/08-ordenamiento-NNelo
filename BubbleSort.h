@@ -14,7 +14,8 @@ void bubbleSort(T *vect, unsigned long tamanio) {
                 vect[i + 1] = aux;
             }
         }
-    }//modificar tamanio
+        tamanio--;
+    }
 }
 
 

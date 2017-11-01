@@ -3,7 +3,9 @@
 
 
 template <class T>
-void shellSort(T *vect, unsigned long tamanio);
+void shellSort(T *vect, unsigned long tamanio){
+
+}
 
 
 
