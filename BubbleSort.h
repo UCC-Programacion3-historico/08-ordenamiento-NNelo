@@ -1,8 +1,9 @@
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
 
+
 template<class T>
-void bubbleSort(T *vect, unsigned long tamanio) {
+void BubbleSort(T *vect, unsigned long tamanio) {
     bool B = false;
     while (!B) {
         B = true;
@@ -14,6 +15,7 @@ void bubbleSort(T *vect, unsigned long tamanio) {
                 vect[i + 1] = aux;
             }
         }
+        tamanio--;
     }//modificar tamanio
 }
 
