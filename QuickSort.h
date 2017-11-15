@@ -19,26 +19,25 @@ void quickSort(T *v, unsigned long inicio, unsigned long fin) {
     unsigned long piv = inicio;
     unsigned long izq = inicio + 1;
     unsigned long der = fin;
-    if (fin <= inicio) {
+    if (fin <= inicio)
         return;
-    }
+
     while (izq < der) {
         while (izq < fin && v[piv] >= v[izq]) {
             izq++;
         }
 
-        while (v[piv] < v[der]) {
+        while (v[piv] < v[der] && der > piv) {
             der--;
         }
 
-        mostrar2(v, inicio, fin, izq,der);
+//        mostrar2(v, inicio, fin, izq, der);
         if (izq < der) {
             swap<T>(v, izq, der);
         }
     }
-
-
-    swap<T>(v, piv, der);
+    if (izq == der)
+        swap<T>(v, piv, der);       // linea salvadora de todo el Quicksort
 
     quickSort(v, inicio, izq - 1);
     quickSort(v, izq + 1, fin);
