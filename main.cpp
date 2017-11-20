@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     string line;
     string *palabras = new string[2014323]();
-    ifstream miArchivo("../dicc.txt");
+    ifstream miArchivo("../dic.txt");
     unsigned long indice = 0;
 
     if (miArchivo.is_open()) {
@@ -21,7 +21,7 @@ int main() {
 
 //        bubbleSort<string>(palabras, indice);
 //        quickSort(palabras, 0, indice - 1);
-        shellSort(palabras, indice - 1);
+        shellSort(palabras, indice);
 
         for (unsigned long i = 0; i < indice; i++)
             cout << palabras[i] << endl;
