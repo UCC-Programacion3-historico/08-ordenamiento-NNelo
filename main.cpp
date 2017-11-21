@@ -4,13 +4,14 @@
 #include "BubbleSort.h"
 #include "QuickSort.h"
 #include "ShellSort.h"
+#include "InterSort.h"
 
 using namespace std;
 
 int main() {
     string line;
     string *palabras = new string[2014323]();
-    ifstream miArchivo("../dic.txt");
+    ifstream miArchivo("../dicc.txt");
     unsigned long indice = 0;
 
     if (miArchivo.is_open()) {
@@ -19,11 +20,12 @@ int main() {
             indice++;
         }
 
-//        bubbleSort<string>(palabras, indice);
+//        bubbleSort(palabras, indice);
 //        quickSort(palabras, 0, indice - 1);
-        shellSort(palabras, indice);
+//        shellSort(palabras, indice);
+        interSort(palabras, indice);
 
-        for (unsigned long i = 0; i < indice; i++)
+        for (unsigned long i = 0; i <= indice; i++)
             cout << palabras[i] << endl;
 
     } else

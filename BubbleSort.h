@@ -6,7 +6,7 @@ void bubbleSort(T *vect, unsigned long tamanio) {
     bool B = false;
     while (!B) {
         B = true;
-        for (int i = 0; i < tamanio; ++i) {
+        for (int i = 0; i < tamanio; ++i) {         //tamanio -i
             if (vect[i] > vect[i + 1]) {
                 B = false;
                 T aux = vect[i];
